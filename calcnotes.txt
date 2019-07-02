@@ -8,3 +8,6 @@ Process
         -- remember that with grid, you want to keep the calculator layout in mind.
 
 2. Start initial styling 
+    * Set font and font weight since calculator numbers will all use the same ones.
+    * set background body to desired color.
+    * style grid

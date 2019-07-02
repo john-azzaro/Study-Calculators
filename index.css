@@ -1,5 +1,17 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;                        /* all numbers Poppins with default of sans-serif*/
+    font-weight: normal;                                       /* set font boldness to normal */
 }
 
+body {
+    padding: 0;                                                                              /* remove all padding*/
+    margin: 0;                                                                               /* remove all margin*/
+    background: linear-gradient(to right, rgb(203, 210, 224), rgb(183, 187, 159))        /* color of background is a gradient*/
+}
+
+.calculator-grid {                                               /* For the grid that wraps the entire calculator...*/
+    display: grid;                                                     /* set display as grid */
+    justify-content: center;                                           /* set the content in the middle */
+    align-items: center;                                               /* set the items in the middle */
+}
