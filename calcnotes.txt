@@ -1,5 +1,10 @@
 Process
 //////////////////////////////////
 
-1. Add in elements for calculator.
-    *  
+1. Add in HTML elements for calculator.
+    * Create a div to contain the calculator.
+    * Create a div to contain the screen, which will have current input and past input.
+    * Create buttons for numbers and symbols, with 2 buttons at twice the width for easier UX.
+        -- remember that with grid, you want to keep the calculator layout in mind.
+
+2. Start initial styling 
