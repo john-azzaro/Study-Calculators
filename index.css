@@ -13,5 +13,28 @@ body {
 .calculator-grid {                                               /* For the grid that wraps the entire calculator...*/
     display: grid;                                                     /* set display as grid */
     justify-content: center;                                           /* set the content in the middle */
-    align-items: center;                                               /* set the items in the middle */
+    align-content: center;                                             /* set the items in the middle */
+    min-height: 100vh;                                                 /* set height to fill 100% of the view port */
+    grid-template-columns: repeat(4, 100px);                           /* inside the grid, we want to have 4 columns which are 100px wide */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);          /* for the rows, we want to have something that can accomodate larger numbers, so minmax 120px and auto to expand and repeat 5x the value of 100px to make the buttons square*/
+}
+
+.calculator-grid > button {                                       /* for button styling...*/
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background-color: rgba(188, 212, 236, 0.75)
+}
+
+.calculator-grid > button:hover {                                  /* button on hover */
+    background-color: rgba(255, 253, 240, 0.9)
+}
+
+.span-two {                                                        /* for the ac and equal buttons that have x2 width */
+    grid-column: span 2
+}
+
+.output {                                                          /* For the output window...*/
+    grid-column: 1 / -1;                                           /* make the grid column go from the beginning to the end with 1 / -1 */
 }
