@@ -2,12 +2,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;                        /* all numbers Poppins with default of sans-serif*/
     font-weight: normal;                                       /* set font boldness to normal */
+    color: rgb(238, 232, 232)
 }
 
 body {
     padding: 0;                                                                              /* remove all padding*/
     margin: 0;                                                                               /* remove all margin*/
-    background: linear-gradient(to right, rgb(203, 210, 224), rgb(183, 187, 159))        /* color of background is a gradient*/
+    background: linear-gradient(to right, rgb(177, 178, 189), rgb(149, 151, 168))        /* color of background is a gradient*/
 }
 
 .calculator-grid {                                               /* For the grid that wraps the entire calculator...*/
@@ -22,14 +23,41 @@ body {
 .calculator-grid > button {                                       /* for button styling...*/
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid rgb(255, 255, 255);
-    outline: none;
-    background-color: rgba(188, 212, 236, 0.75)
+    border: 1px solid rgb(75, 76, 96);
+    outline: none;  
 }
 
-.calculator-grid > button:hover {                                  /* button on hover */
-    background-color: rgba(255, 253, 240, 0.9)
+
+
+.numerical-button {                                                 /* *styling for numerical buttons*/
+    background-color: rgba(75, 76, 96);
 }
+
+.numerical-button:hover {
+    background-color: rgba(71, 72, 91);
+}
+
+.basic-operation-key {
+    background-color: rgba(94, 95, 112);                          /* styling for basic operations */
+}
+
+.basic-operation-key:hover {
+    background-color: rgba(89, 90, 107); 
+}
+
+.delete-key {
+    background-color: rgba(94, 95, 112); 
+}
+
+.delete-key:hover {
+    background-color: rgba(89, 90, 107); 
+}
+
+.all-clear-key {
+    background-color: rgba(75, 76, 96); 
+}
+
+
 
 .span-two {                                                        /* for the ac and equal buttons that have x2 width */
     grid-column: span 2
