@@ -27,9 +27,14 @@ body {
     outline: none;  
 }
 
+.span-two {                                                        /* for the ac and equal buttons that have x2 width */
+    grid-column: span 2
+}
 
 
-.numerical-button {                                                 /* *styling for numerical buttons*/
+/*// Button styling //*/
+
+.numerical-button {                                               
     background-color: rgba(75, 76, 96);
 }
 
@@ -38,7 +43,7 @@ body {
 }
 
 .basic-operation-key {
-    background-color: rgba(94, 95, 112);                          /* styling for basic operations */
+    background-color: rgba(94, 95, 112);                          
 }
 
 .basic-operation-key:hover {
@@ -62,18 +67,22 @@ body {
 }
 
 .equals-key {
-    background-color: rgb(182, 156, 97);
+    background-color: rgb(133, 146, 58);
 }
 
 .equals-key:hover {
-    background-color: rgb(165, 143, 92);
-}
-
-
-.span-two {                                                        /* for the ac and equal buttons that have x2 width */
-    grid-column: span 2
+    background-color: rgb(125, 138, 56);
 }
 
 .output {                                                          /* For the output window...*/
     grid-column: 1 / -1;                                           /* make the grid column go from the beginning to the end with 1 / -1 */
+    background-color: rgb(247, 247, 247);
+}
+
+.current-operand-color {
+    color: rgba(75, 76, 96);
+}
+
+.previous-operand-color {
+    color: rgb(150, 151, 158);
 }
