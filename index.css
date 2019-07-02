@@ -27,6 +27,18 @@ body {
     outline: none;  
 }
 
+.output {                                                       /* For the output window...*/
+    grid-column: 1 / -1;                                           /* ... make the grid column go from the beginning to the end with 1 / -1 ...*/
+    background-color: rgb(247, 247, 247);                        /* ... make the background white...*/
+    display: flex;                                                 /* ... to align elements, display with flex for side-by-side...*/
+    align-items: flex-end;                                         /* ... align to the right...*/
+    justify-content: space-around;                                 /* ... have elements spaced evenly in the output div...*/  
+    flex-direction: column;                                        /* ... stack elements on top of each other...*/
+    padding: 10px;                                                 /* ... and have adequate padding away from the output borders...*/
+    word-wrap: break-word;                                         /* ... if the number gets too long, the number will expand downwards...*/
+    word-break: break-all;                                         /* ... break all words in the output...*/ 
+} 
+
 .span-two {                                                        /* for the ac and equal buttons that have x2 width */
     grid-column: span 2
 }
@@ -67,22 +79,23 @@ body {
 }
 
 .equals-key {
-    background-color: rgb(133, 146, 58);
+    background-color: rgb(116, 119, 177);
 }
 
 .equals-key:hover {
-    background-color: rgb(125, 138, 56);
+    background-color: rgb(108, 111, 163);
 }
 
-.output {                                                          /* For the output window...*/
-    grid-column: 1 / -1;                                           /* make the grid column go from the beginning to the end with 1 / -1 */
-    background-color: rgb(247, 247, 247);
-}
-
-.current-operand-color {
-    color: rgba(75, 76, 96);
-}
-
-.previous-operand-color {
+.previous-operand-styling{
     color: rgb(150, 151, 158);
+    font-size: 1.5rem;
 }
+
+.current-operand-styling {
+    color: rgb(100, 102, 128);
+    font-size: 2.5rem;
+}
+
+
+
+
