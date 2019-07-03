@@ -18,8 +18,10 @@ class Calculator {                                                              
    }
 
    appendNumber(number) {                                                           // every time a use clicks on a number, add to the screen. Also, pass the number the user selects.
-    if (number === '.' && this.currentOperand.includes('.')) return                     // resolves multiple decimal point issue... if the number is "." and already include it, return     
-    this.currentOperand = this.currentOperand.toString() + number.toString();           // update the currentOperand and append the current number by converting it to a string and append                                                                                         
+      if (number === '.' && this.currentOperand.includes('.')) {                         // resolves multiple decimal point issue... if the number is "." and already include it, 
+       return;                                                                           //  return
+      }                        
+      this.currentOperand = this.currentOperand.toString() + number.toString();           // update the currentOperand and append the current number by converting it to a string and append                                                                                         
    }                                                                                    // with another number.  Note that you need to need to convert to strings is because javascript will
                                                                                         // try to add as acutal numbers (i.e. 2 + 2 = 4 instead of 2 + 2 =) 
 

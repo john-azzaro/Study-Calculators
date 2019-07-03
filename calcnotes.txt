@@ -24,6 +24,12 @@ STYLE THE APP
 
 
 
+* interestibng solutions
+------------------------
+  to resolve additional decimal points in append number:    if (number === '.' && this.currentOperand.includes('.')) return  
+
+
+
 
 
 
