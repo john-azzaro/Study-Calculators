@@ -4,7 +4,7 @@ class Calculator {                                                              
    constructor(previousOperandTextElement, currentOperandTextElement) {          // so that we can set the text elements inside the calculator
        this.previousOperandTextElement = previousOperandTextElement
        this.currentOperandTextElement = currentOperandTextElement
-       this.clear;                                                                      // clear values when we create a new calculator.
+       this.clear();                                                               // clear values when we create a new calculator.
    }                                                                                   
                                                                                 // Third, thinking of all the function the calculator can do and define them as a function below.
    clear() {                                                                           // clear numbers (and note that these are all the variables that the calculator can hold)
@@ -18,8 +18,9 @@ class Calculator {                                                              
    }
 
    appendNumber(number) {                                                               // every time a use clicks on a number, add to the screen. Also, pass the number the user selects.
-        this.currentOperand = number
-   }
+    this.currentOperand = this.currentOperand.toString() + number.toString();           // update the currentOperand and append the current number by converting it to a string and append                                                                                         
+   }                                                                                    // with another number.  Note that you need to need to convert to strings is because javascript will
+                                                                                        // try to add as acutal numbers (i.e. 2 + 2 = 4 instead of 2 + 2 =) 
 
    chooseOperation(operation) {                                                         // when the user clicks on an operation (i.e. +,-,*,%) and take the specific operation the user selected.
 
@@ -30,7 +31,7 @@ class Calculator {                                                              
    }
 
    updateDisplay() {                                                                     // updates display inside the output.
-        this.currentOperandTextElement.innerText = this.currentOperand
+        this.currentOperandTextElement.innerText = this.currentOperand;
    }
 }
 
@@ -55,9 +56,15 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 // Sixth, to use the calculator object, select the specific buttons
 
+
+
 numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
     button.addEventListener('click', function() {                                                 // and add an event listener so that when the user clicks, the calc will...
         calculator.appendNumber(button.innerText)                                                // calculator.appendNumber with the inner text (i.e. 1, 2, 3, etc.)...
         calculator.updateDisplay()                                                               // and lastly update the display so every time the user clicks a button, it shows in display.
     });
 });
+
+
+
+
