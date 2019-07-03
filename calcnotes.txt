@@ -19,6 +19,8 @@ STYLE THE APP
 
 3. Intial JavaScript V1
     * create selectors via data attributes
+    * create js selectors
+    * 
 
 
 
