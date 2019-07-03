@@ -19,6 +19,7 @@ STYLE THE APP
 HOOK-UP 
 3. Intial JavaScript
     * First objective: Be able to select all number buttons, operand buttons, as well as AC, DEL, and =.
+        *   Hook up all your buttons
         *   
 
 
