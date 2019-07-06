@@ -79,9 +79,9 @@ class Calculator {                                                              
   // First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
   const numberButtons = document.querySelectorAll('[data-number]');
   const operationButtons = document.querySelectorAll('[data-operation]');
-  const equalsButton = document.querySelector('[data-equals]');
-  const deleteButton = document.querySelector('[data-delete]');
-  const allClearButton = document.querySelector('[data-all-clear]');
+//   const equalsButton = document.querySelector('[data-equals]');
+//   const deleteButton = document.querySelector('[data-delete]');
+//   const allClearButton = document.querySelector('[data-all-clear]');
   const previousOperandTextElement = document.querySelector('[data-previous-operand]');
   const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
@@ -104,31 +104,36 @@ operationButtons.forEach(function (button) {                                    
     });
 });
 
-equalsButton.addEventListener('click', function(event) {                                          // add event listener to equalsbutton
-    calculator.compute();                                                                         // call compute button (in calculator class)
-    calculator.updateDisplay();                                                                   // and update the display.
-})
-
-// allClearButton.addEventListener('click', function(event) {                                        // add event listener to equalsbutton
-//     calculator.clear();                                                                           // call compute button (in calculator class)
+// equalsButton.addEventListener('click', function(event) {                                          // add event listener to equalsbutton
+//     calculator.compute();                                                                         // call compute button (in calculator class)
 //     calculator.updateDisplay();                                                                   // and update the display.
 // })
 
-deleteButton.addEventListener('click', function(event) {                                        // add event listener to delete
-    calculator.delete();                                                                           // call compute button (in calculator class)
-    calculator.updateDisplay();                                                                   // and update the display.
-})
+function equalsButton() {
+    $('body').on('click', '#js-equals-button', function(event) {
+        calculator.compute();                                                                         // call compute button (in calculator class)
+        calculator.updateDisplay();                                                                   // and update the display.
+    });
+}
 
+function deleteButton() {
+    $('body').on('click', '#js-delete-button', function(event) {
+        calculator.delete();                                                                           
+        calculator.updateDisplay();  
+    });
+}
 
-function allClear() {
-    $('body').on('click', '#data-all-clear', function(event) {
-        calculator.clear();                                                                           // call compute button (in calculator class)
+function allClearButton() {
+    $('body').on('click', '#js-all-clear-button', function(event) {
+        calculator.clear();                                                                           
         calculator.updateDisplay();  
     });
 }
 
 function setupEventHandlers() {
-    allClear();
+    allClearButton();
+    deleteButton();
+    equalsButton();
 }
 
 function initialize() {
