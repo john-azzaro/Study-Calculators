@@ -37,8 +37,8 @@ class Calculator {                                                              
         this.currentOperand = '';                                                       // make currentOperand an empty string (clearing out the value).
    }
 
-   compute() {                                                                           // take the values int he calculator and compute a single value.
-
+   compute() {                                                                           // take the values in the calculator and compute a single value.
+        let computation                                                                          // this variable is the result of the compute function
    }
 
    updateDisplay() {                                                                     // updates display inside the output.
@@ -71,19 +71,23 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 
 numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
-    button.addEventListener('click', function() {                                                 // and add an event listener so that when the user clicks, the calc will...
+    button.addEventListener('click', function(event) {                                                 // and add an event listener so that when the user clicks, the calc will...
         calculator.appendNumber(button.innerText);                                                // calculator.appendNumber with the inner text (i.e. 1, 2, 3, etc.)...
         calculator.updateDisplay();                                                               // and lastly update the display so every time the user clicks a button, it shows in display.
     });
 });
  
 operationButtons.forEach(function (button) {                                                  // for the operation button event listener....                                       
-    button.addEventListener('click', function() {                                                 
+    button.addEventListener('click', function(event) {                                                 
         calculator.chooseOperation(button.innerText)                                          // choose an operation (via the calculator class) and pass the text of that operation 
         calculator.updateDisplay();                                                             // ... and update the display.   
     });
 });
 
+equalsButton.addEventListener('click', (button) => {                                             // add event listener to equalsbutton
+    calculator.compute();                                                                        // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                  // and update the display.
+})
 
 
 
