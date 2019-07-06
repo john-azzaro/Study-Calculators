@@ -104,10 +104,13 @@ operationButtons.forEach(function (button) {                                    
     });
 });
 
-// equalsButton.addEventListener('click', function(event) {                                          // add event listener to equalsbutton
-//     calculator.compute();                                                                         // call compute button (in calculator class)
-//     calculator.updateDisplay();                                                                   // and update the display.
-// })
+
+// function operationButtons() {
+//     $('body').each('click', '#js-operation-button', function(event) {
+//         calculator.chooseOperation(button.innerText)                                             
+//         calculator.updateDisplay();     
+//     });
+// }
 
 function equalsButton() {
     $('body').on('click', '#js-equals-button', function(event) {
@@ -134,6 +137,7 @@ function setupEventHandlers() {
     allClearButton();
     deleteButton();
     equalsButton();
+    operationButtons();
 }
 
 function initialize() {
@@ -141,7 +145,5 @@ function initialize() {
 }
 
 $(initialize);
-
-
 
 
