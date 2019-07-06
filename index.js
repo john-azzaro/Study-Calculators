@@ -76,17 +76,23 @@ class Calculator {                                                              
                                                                                     
 
 
-// First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
-const numberButtons = document.querySelectorAll('[data-number]');
-const operationButtons = document.querySelectorAll('[data-operation]');
-const equalsButton = document.querySelector('[data-equals]');
-const deleteButton = document.querySelector('[data-delete]');
-const allClearButton = document.querySelector('[data-all-clear]');
-const previousOperandTextElement = document.querySelector('[data-previous-operand]');
-const currentOperandTextElement = document.querySelector('[data-current-operand]');
+  // First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
+  const numberButtons = document.querySelectorAll('[data-number]');
+  const operationButtons = document.querySelectorAll('[data-operation]');
+  const equalsButton = document.querySelector('[data-equals]');
+  const deleteButton = document.querySelector('[data-delete]');
+  const allClearButton = document.querySelector('[data-all-clear]');
+  const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+  const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
-                                                                                             
+                       
+
+                                                                                             // Fourth, hook up all the variables so that they operate on the calculator.
+
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)     // Fifth, create a calculator object and pass everything from the constructor into it.
+
+// Sixth, to use the calculator object, select the specific buttons
+
 
 
 numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
@@ -109,7 +115,7 @@ equalsButton.addEventListener('click', function(event) {                        
 })
 
 allClearButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
-    calculator.clearAll();                                                                        // call compute button (in calculator class)
+    calculator.clear();                                                                        // call compute button (in calculator class)
     calculator.updateDisplay();                                                                  // and update the display.
 })
 
