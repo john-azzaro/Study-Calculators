@@ -66,13 +66,6 @@ class Calculator {                                                              
     
    }
 
-
-
-
-
-
-
-
    updateDisplay() {                                                                     // updates display inside the output.
         this.currentOperandTextElement.innerText = this.currentOperand;                     // this shows the current operand from input.
         this.previousOperandTextElement.innerText = this.previousOperand;                    // this shows the previous operand from input
@@ -116,8 +109,13 @@ operationButtons.forEach(function (button) {                                    
     });
 });
 
-equalsButton.addEventListener('click', function(event) {                                             // add event listener to equalsbutton
+equalsButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
     calculator.compute();                                                                        // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                  // and update the display.
+})
+
+allClearButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
+    calculator.clear();                                                                        // call compute button (in calculator class)
     calculator.updateDisplay();                                                                  // and update the display.
 })
 
