@@ -1,7 +1,5 @@
 'use strict';
-
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);     // Fifth, create a calculator object and pass everything from the constructor into it.
-
+ 
 class Calculator {                                                               // Second, create a class and constructors that will take all the inputs and function for the calculator
    constructor(previousOperandTextElement, currentOperandTextElement) {          // so that we can set the text elements inside the calculator
        this.previousOperandTextElement = previousOperandTextElement;
@@ -78,16 +76,19 @@ class Calculator {                                                              
                                                                                     
 
 
-  // First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
-  const numberButtons = document.querySelectorAll('[data-number]');
-  const operationButtons = document.querySelectorAll('[data-operation]');
-  const equalsButton = document.querySelector('[data-equals]');
-  const deleteButton = document.querySelector('[data-delete]');
-  const allClearButton = document.querySelector('[data-all-clear]');
-  const previousOperandTextElement = document.querySelector('[data-previous-operand]');
-  const currentOperandTextElement = document.querySelector('[data-current-operand]');
+// First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
+const numberButtons = document.querySelectorAll('[data-number]');
+const operationButtons = document.querySelectorAll('[data-operation]');
+const equalsButton = document.querySelector('[data-equals]');
+const deleteButton = document.querySelector('[data-delete]');
+const allClearButton = document.querySelector('[data-all-clear]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
-  
+                                                                                             
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)     // Fifth, create a calculator object and pass everything from the constructor into it.
+
+
 numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
     button.addEventListener('click', function(event) {                                                 // and add an event listener so that when the user clicks, the calc will...
         calculator.appendNumber(button.innerText);                                                // calculator.appendNumber with the inner text (i.e. 1, 2, 3, etc.)...
@@ -108,7 +109,7 @@ equalsButton.addEventListener('click', function(event) {                        
 })
 
 allClearButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
-    calculator.clear();                                                                        // call compute button (in calculator class)
+    calculator.clearAll();                                                                        // call compute button (in calculator class)
     calculator.updateDisplay();                                                                  // and update the display.
 })
 
