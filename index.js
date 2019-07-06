@@ -109,15 +109,33 @@ equalsButton.addEventListener('click', function(event) {                        
     calculator.updateDisplay();                                                                   // and update the display.
 })
 
-allClearButton.addEventListener('click', function(event) {                                        // add event listener to equalsbutton
-    calculator.clear();                                                                           // call compute button (in calculator class)
-    calculator.updateDisplay();                                                                   // and update the display.
-})
+// allClearButton.addEventListener('click', function(event) {                                        // add event listener to equalsbutton
+//     calculator.clear();                                                                           // call compute button (in calculator class)
+//     calculator.updateDisplay();                                                                   // and update the display.
+// })
 
 deleteButton.addEventListener('click', function(event) {                                        // add event listener to delete
     calculator.delete();                                                                           // call compute button (in calculator class)
     calculator.updateDisplay();                                                                   // and update the display.
 })
+
+
+function allClear() {
+    $('body').on('click', '#data-all-clear', function(event) {
+        calculator.clear();                                                                           // call compute button (in calculator class)
+        calculator.updateDisplay();  
+    });
+}
+
+function setupEventHandlers() {
+    allClear();
+}
+
+function initialize() {
+    setupEventHandlers();
+}
+
+$(initialize);
 
 
 
