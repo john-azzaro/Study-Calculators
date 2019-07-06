@@ -43,7 +43,12 @@ class Calculator {                                                              
         const current = parseFloat(this.currentOperand);                                     // the current variable (converts the previousOperand string to a number).
         if (isNan(prev) || isNaN(current))  {                                            // then check to see that if the user doesnt put anything in and then pushes equal, nothing will happen with isNaN
             return;                                                                          // the function will not run.
-        }       
+        }   
+        switch (this.operation)  {                                                        // then run an switch statement on this.operation...
+            case '+':                                                                         // in this case, when this.operation equals a plus...
+            computation = prev + current;                                                     // set the computation to be the sum of prev plus current.
+            break;
+        }  
     
    }
 
