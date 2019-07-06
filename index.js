@@ -41,9 +41,9 @@ class Calculator {                                                              
         let computation;                                                                   // this variable is the result of the compute function.
         const prev = parseFloat(this.previousOperand);                                     // the prev variable (converts the previousOperand string to a number.)
         const current = parseFloat(this.currentOperand);                                     // the current variable (converts the previousOperand string to a number).
-        if (isNan(prev) || isNaN(current))  {                                            // then check to see that if the user doesnt put anything in and then pushes equal, nothing will happen with isNaN
-            return;                                                                          // the function will not run.
-        }   
+        if (isNaN(prev) || isNaN(current)) {                                           // then check to see that if the user doesnt put anything in and then pushes equal, nothing will happen with isNaN
+            return                                                                      // the function will not run.
+        }
         switch (this.operation)  {                                                        // then run an switch statement on this.operation...
             case '+':                                                                         // in this case, when this.operation equals a plus...
                 computation = prev + current;                                                     // set the computation to be the sum of prev PLUS current.
@@ -72,7 +72,7 @@ class Calculator {                                                              
 
 
 
-   
+
    updateDisplay() {                                                                     // updates display inside the output.
         this.currentOperandTextElement.innerText = this.currentOperand;                     // this shows the current operand from input.
         this.previousOperandTextElement.innerText = this.previousOperand;                    // this shows the previous operand from input
