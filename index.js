@@ -46,12 +46,33 @@ class Calculator {                                                              
         }   
         switch (this.operation)  {                                                        // then run an switch statement on this.operation...
             case '+':                                                                         // in this case, when this.operation equals a plus...
-            computation = prev + current;                                                     // set the computation to be the sum of prev plus current.
-            break;
-        }  
+                computation = prev + current;                                                     // set the computation to be the sum of prev PLUS current.
+                break;
+            case '-':                                                                         // in this case, when this.operation equals a minus...
+                computation = prev - current;                                                     // set the computation to be the sum of prev MINUS current.
+                break;
+            case '*':                                                                         // in this case, when this.operation equals a multiplication...
+                computation = prev * current;                                                     // set the computation to be the sum of prev MULTIPLIED BY current.
+                break;
+            case '÷':                                                                         // in this case, when this.operation equals a divided...
+                computation = prev / current;                                                     // set the computation to be the sum of prev DIVIDED BY current.
+                break;
+            default:                                                                          // if none of the above statements is executed, simply return because you have an invalid operation.
+                return;          
+        } 
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
     
    }
 
+
+
+
+
+
+
+   
    updateDisplay() {                                                                     // updates display inside the output.
         this.currentOperandTextElement.innerText = this.currentOperand;                     // this shows the current operand from input.
         this.previousOperandTextElement.innerText = this.previousOperand;                    // this shows the previous operand from input
@@ -95,7 +116,7 @@ operationButtons.forEach(function (button) {                                    
     });
 });
 
-equalsButton.addEventListener('click', (button) => {                                             // add event listener to equalsbutton
+equalsButton.addEventListener('click', function(event) {                                             // add event listener to equalsbutton
     calculator.compute();                                                                        // call compute button (in calculator class)
     calculator.updateDisplay();                                                                  // and update the display.
 })
