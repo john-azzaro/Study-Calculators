@@ -73,22 +73,18 @@ class Calculator {                                                              
 }
 
                                        
-                                                                                    
-
-
   // First, select all elements that match a specfic string, use "[]"(bc data attribute) and selector.
   const numberButtons = document.querySelectorAll('[data-number]');
   const operationButtons = document.querySelectorAll('[data-operation]');
-//   const equalsButton = document.querySelector('[data-equals]');
-//   const deleteButton = document.querySelector('[data-delete]');
-//   const allClearButton = document.querySelector('[data-all-clear]');
+  const equalsButton = document.querySelector('[data-equals]');
+  const deleteButton = document.querySelector('[data-delete]');
+  const allClearButton = document.querySelector('[data-all-clear]');
   const previousOperandTextElement = document.querySelector('[data-previous-operand]');
   const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
                                                                                          
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)          //  Ceate a calculator object and pass everything from the constructor into it.
-
 
 numberButtons.forEach(function (button) {                                                         // so select number button and for each (loop over all the buttons),
     button.addEventListener('click', function(event) {                                            // and add an event listener so that when the user clicks, the calc will...
@@ -104,46 +100,19 @@ operationButtons.forEach(function (button) {                                    
     });
 });
 
+equalsButton.addEventListener('click', function(event) {                                          // add event listener to equalsbutton
+    calculator.compute();                                                                         // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
+})
 
-// function operationButtons() {
-//     $('body').each('click', '#js-operation-button', function(event) {
-//         calculator.chooseOperation(button.innerText)                                             
-//         calculator.updateDisplay();     
-//     });
-// }
+allClearButton.addEventListener('click', function(event) {                                        // add event listener to equalsbutton
+    calculator.clear();                                                                           // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
+})
 
-function equalsButton() {
-    $('body').on('click', '#js-equals-button', function(event) {
-        calculator.compute();                                                                         // call compute button (in calculator class)
-        calculator.updateDisplay();                                                                   // and update the display.
-    });
-}
-
-function deleteButton() {
-    $('body').on('click', '#js-delete-button', function(event) {
-        calculator.delete();                                                                           
-        calculator.updateDisplay();  
-    });
-}
-
-function allClearButton() {
-    $('body').on('click', '#js-all-clear-button', function(event) {
-        calculator.clear();                                                                           
-        calculator.updateDisplay();  
-    });
-}
-
-function setupEventHandlers() {
-    allClearButton();
-    deleteButton();
-    equalsButton();
-    operationButtons();
-}
-
-function initialize() {
-    setupEventHandlers();
-}
-
-$(initialize);
+deleteButton.addEventListener('click', function(event) {                                        // add event listener to delete
+    calculator.delete();                                                                           // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
+})
 
 
