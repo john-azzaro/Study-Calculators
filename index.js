@@ -1,5 +1,7 @@
 'use strict';
- 
+
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);     // Fifth, create a calculator object and pass everything from the constructor into it.
+
 class Calculator {                                                               // Second, create a class and constructors that will take all the inputs and function for the calculator
    constructor(previousOperandTextElement, currentOperandTextElement) {          // so that we can set the text elements inside the calculator
        this.previousOperandTextElement = previousOperandTextElement;
@@ -85,16 +87,7 @@ class Calculator {                                                              
   const previousOperandTextElement = document.querySelector('[data-previous-operand]');
   const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
-                       
-
-                                                                                             // Fourth, hook up all the variables so that they operate on the calculator.
-
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)     // Fifth, create a calculator object and pass everything from the constructor into it.
-
-// Sixth, to use the calculator object, select the specific buttons
-
-
-
+  
 numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
     button.addEventListener('click', function(event) {                                                 // and add an event listener so that when the user clicks, the calc will...
         calculator.appendNumber(button.innerText);                                                // calculator.appendNumber with the inner text (i.e. 1, 2, 3, etc.)...
