@@ -38,7 +38,13 @@ class Calculator {                                                              
    }
 
    compute() {                                                                           // take the values in the calculator and compute a single value.
-        let computation                                                                          // this variable is the result of the compute function
+        let computation;                                                                   // this variable is the result of the compute function.
+        const prev = parseFloat(this.previousOperand);                                     // the prev variable (converts the previousOperand string to a number.)
+        const current = parseFloat(this.currentOperand);                                     // the current variable (converts the previousOperand string to a number).
+        if (isNan(prev) || isNaN(current))  {                                            // then check to see that if the user doesnt put anything in and then pushes equal, nothing will happen with isNaN
+            return;                                                                          // the function will not run.
+        }       
+    
    }
 
    updateDisplay() {                                                                     // updates display inside the output.
