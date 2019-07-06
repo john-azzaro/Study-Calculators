@@ -14,7 +14,7 @@ class Calculator {                                                              
    }
 
    delete() {                                                                           // delete a number
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);              // set current operand to currentOperand, convert to a string, get last value from the string and cut. 
    }
 
    appendNumber(number) {                                                           // every time a use clicks on a number, add to the screen. Also, pass the number the user selects.
@@ -54,10 +54,10 @@ class Calculator {                                                              
             case '*':                                                                         // in this case, when this.operation equals a multiplication...
                 computation = prev * current;                                                     // set the computation to be the sum of prev MULTIPLIED BY current.
                 break;
-            case '÷':                                                                         // in this case, when this.operation equals a divided...
-                computation = prev / current;                                                     // set the computation to be the sum of prev DIVIDED BY current.
+            case '÷':                                                                    // in this case, when this.operation equals a divided...
+                computation = prev / current;                                            // set the computation to be the sum of prev DIVIDED BY current.
                 break;
-            default:                                                                          // if none of the above statements is executed, simply return because you have an invalid operation.
+            default:                                                                     // if none of the above statements is executed, simply return because you have an invalid operation.
                 return;          
         } 
         this.currentOperand = computation;
@@ -66,9 +66,9 @@ class Calculator {                                                              
     
    }
 
-   updateDisplay() {                                                                     // updates display inside the output.
-        this.currentOperandTextElement.innerText = this.currentOperand;                     // this shows the current operand from input.
-        this.previousOperandTextElement.innerText = this.previousOperand;                    // this shows the previous operand from input
+   updateDisplay() {                                                                    // updates display inside the output.
+        this.currentOperandTextElement.innerText = this.currentOperand;                 // this shows the current operand from input.
+        this.previousOperandTextElement.innerText = this.previousOperand;               // this shows the previous operand from input
    }
 }
 
@@ -85,39 +85,40 @@ class Calculator {                                                              
   const previousOperandTextElement = document.querySelector('[data-previous-operand]');
   const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
-                       
+                                                                                         
 
-                                                                                             // Fourth, hook up all the variables so that they operate on the calculator.
-
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)     // Fifth, create a calculator object and pass everything from the constructor into it.
-
-// Sixth, to use the calculator object, select the specific buttons
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)          //  Ceate a calculator object and pass everything from the constructor into it.
 
 
-
-numberButtons.forEach(function (button) {                                                        // so select number button and for each (loop over all the buttons),
-    button.addEventListener('click', function(event) {                                                 // and add an event listener so that when the user clicks, the calc will...
+numberButtons.forEach(function (button) {                                                         // so select number button and for each (loop over all the buttons),
+    button.addEventListener('click', function(event) {                                            // and add an event listener so that when the user clicks, the calc will...
         calculator.appendNumber(button.innerText);                                                // calculator.appendNumber with the inner text (i.e. 1, 2, 3, etc.)...
         calculator.updateDisplay();                                                               // and lastly update the display so every time the user clicks a button, it shows in display.
     });
 });
  
-operationButtons.forEach(function (button) {                                                  // for the operation button event listener....                                       
+operationButtons.forEach(function (button) {                                                      // for the operation button event listener....                                       
     button.addEventListener('click', function(event) {                                                 
-        calculator.chooseOperation(button.innerText)                                          // choose an operation (via the calculator class) and pass the text of that operation 
-        calculator.updateDisplay();                                                             // ... and update the display.   
+        calculator.chooseOperation(button.innerText)                                              // choose an operation (via the calculator class) and pass the text of that operation 
+        calculator.updateDisplay();                                                               // ... and update the display.   
     });
 });
 
-equalsButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
-    calculator.compute();                                                                        // call compute button (in calculator class)
-    calculator.updateDisplay();                                                                  // and update the display.
+equalsButton.addEventListener('click', function(event) {                                          // add event listener to equalsbutton
+    calculator.compute();                                                                         // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
 })
 
-allClearButton.addEventListener('click', function(event) {                                       // add event listener to equalsbutton
-    calculator.clear();                                                                        // call compute button (in calculator class)
-    calculator.updateDisplay();                                                                  // and update the display.
+allClearButton.addEventListener('click', function(event) {                                        // add event listener to equalsbutton
+    calculator.clear();                                                                           // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
 })
+
+deleteButton.addEventListener('click', function(event) {                                        // add event listener to delete
+    calculator.delete();                                                                           // call compute button (in calculator class)
+    calculator.updateDisplay();                                                                   // and update the display.
+})
+
 
 
 
