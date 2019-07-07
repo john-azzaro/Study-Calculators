@@ -9,7 +9,7 @@ See it Live: https://john-azzaro.github.io/study-calculators/
 <br>
 
 ## Does Calculator Study feature commentary?
-Yes!  I try to make use of EXTENSIVE commentary so that the new and curious can follow the logic in the program and get an idea of my reasoning behind each and every line of code. 
+Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my thought process) so that the new and curious can follow the logic in the program and get an idea of my reasoning behind each and every line of code, . 
 
 <br>
 
