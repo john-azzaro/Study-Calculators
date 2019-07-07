@@ -17,14 +17,14 @@ Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my though
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| Feature                                  | Functionality Added?  | 
-| ---------------------------------------- |-------------:| 
-| Current and Previous Operand Display     | Yes                   | 
-| Basic Operations                         | Yes                  |   
-| Clear                                    | Yes                |   
-| Delete                                   | Yes                 |    
-| Compute                                  | Yes                 |    
-| Equals                                   | Yes                 |    
+| Feature                                  | 
+| ---------------------------------------- |
+| Current and Previous Operand Display     | 
+| Basic Operations                         |   
+| Clear                                    |   
+| Delete                                   |    
+| Compute                                  |   
+| Equals                                   |   
 
 <br>
 
