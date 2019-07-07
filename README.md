@@ -9,7 +9,7 @@ See it Live: https://john-azzaro.github.io/study-calculators/
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| Feature                                  | Added           | 
+| Feature                                  | Functionality Added?           | 
 | ---------------------------------------- |-------------:| 
 | Current and Previous Operand Display     | Yes         | 
 | Basic Operations                         | Yes      |   
