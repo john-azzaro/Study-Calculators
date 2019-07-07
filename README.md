@@ -9,9 +9,12 @@ See it Live: https://john-azzaro.github.io/study-calculators/
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables                                   | Are           | Cool  |
+| ---------------------------------------- |:-------------:| -----:|
+| Current and previous operand display     | right-aligned | $1600 |
+| Basic Operations                                 | centered      |   $12 |
+| Clear                               | are neat                 |    $1         |
+| Delete                               | are neat                 |    $1         |
+| Compute                               | are neat                 |    $1         |
+| Equals                               | are neat                 |    $1         |
 
