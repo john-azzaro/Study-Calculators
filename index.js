@@ -103,7 +103,7 @@ operationButtons.forEach(function (button) {                                    
 });
 
 // function operationButtons() {
-//     $('body').each('click', '#js-operation-button', function(event) {
+//     $('body').on('click', '#js-operation-button', function(event) {
 //         calculator.chooseOperation(button.innerText)                                             
 //         calculator.updateDisplay();     
 //     });
