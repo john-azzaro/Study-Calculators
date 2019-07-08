@@ -17,14 +17,14 @@ Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my though
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| Feature                                  | 
-| ---------------------------------------- |
-| Current Operand Display                  |
-| Previous Operand Display                 |
-| Basic Operations                         |   
-| Clear                                    |   
-| Delete                                   |      
-| Equals                                   |   
+| **Features:**                            | **Feature Notes:**       |
+| ---------------------------------------- | ------------------------:|
+| Current Operand Display                  |   |
+| Previous Operand Display                 |  Basic operation TBA |
+| Basic Operations                         |   |  
+| Clear                                    |   | 
+| Delete                                   |   |    
+| Equals                                   |   | 
 
 <br>
 
