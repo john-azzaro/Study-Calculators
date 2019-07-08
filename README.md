@@ -17,13 +17,13 @@ Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my though
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| **Features:**                            | **Feature Notes:**       |
-| ---------------------------------------- | ------------------------:|
+| **Features:**                            | **Feature Notes:**                             |
+| ---------------------------------------- | ----------------------------------------------:|
 | Current Operand Display                  |   |
 | Previous Operand Display                 |  Basic operation TBA |
-| Basic Operations                         |   |  
+| Basic Operations                         |  Basic operations include: mult, div, add, sub |  
 | Clear                                    |   | 
-| Delete                                   |   |    
+| Delete                                   |  Delete increment of 1  |    
 | Equals                                   |   | 
 
 <br>
