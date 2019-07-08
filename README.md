@@ -13,7 +13,7 @@ Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my though
 
 <br>
 
-## What functionalites does Calculator Study feature?
+## What are the key features of Calculator Study?
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
