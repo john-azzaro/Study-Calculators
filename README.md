@@ -18,7 +18,7 @@ Since this study is ongoing, basic functionalities are covered first and more ad
 
 
 | **Features:**                            | **Feature Notes:**                             |
-| ---------------------------------------- | ----------------------------------------------:|
+| ---------------------------------------- | ----------------------------------------------|
 | Current Operand Display                  |   |
 | Previous Operand Display                 |  Basic operation TBA |
 | Basic Operations                         |  Basic operations include: mult, div, add, sub |  
