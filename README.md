@@ -19,11 +19,11 @@ Since this study is ongoing, basic functionalities are covered first and more ad
 
 | Feature                                  | 
 | ---------------------------------------- |
-| Current and Previous Operand Display     | 
+| Current Operand Display                  |
+| Previous Operand Display                 |
 | Basic Operations                         |   
 | Clear                                    |   
-| Delete                                   |    
-| Compute                                  |   
+| Delete                                   |      
 | Equals                                   |   
 
 <br>
