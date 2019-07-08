@@ -1,6 +1,6 @@
 'use strict';
  
-class Calculator {                                                                                  // Second, create a class and constructors that will take all the inputs and function for the calculator so that we can set the text elements inside the calculator
+class Calculator {                                                                               // Second, create a class and constructors that will take all the inputs and function for the calculator so that we can set the text elements inside the calculator
    constructor(previousOperandTextElement, currentOperandTextElement) {                                // and create a constructor that takes all the inputs... 
        this.previousOperandTextElement = previousOperandTextElement;                                   // ... such as the previousOperandTextElement (i.e. the previous number in the calculator)
        this.currentOperandTextElement = currentOperandTextElement;                                     // ... and the currentOperandTextElement (i.e. the current number in the calculator)
