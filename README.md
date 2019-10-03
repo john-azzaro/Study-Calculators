@@ -8,9 +8,9 @@ See it Live: https://john-azzaro.github.io/study-calculators/
 
 Here are a few questions from the study to explore:
 
-* [](#)
-* [](#)
-* [](#)
+* [What are some interesting takeaways from the calculator study?](#What-are-some-interesting-takeaways-from-the-calculator-study)
+* [Does Calculator Study feature commentary?](#Does-Calculator-Study-feature-commentary)
+* [What are the key features of Calculator Study?](#What-are-the-key-features-of-Calculator-Study)
 
 <br>
 
@@ -32,16 +32,20 @@ Additionally, remember to add square brackets when you do your selectors.
 
 <br>
 
-### Use of class and constructors is WORTH IT
-After doing a bit of research and tutorial hopping, classes and constructors have proven to be extremely useful and easy to use once you get the hang of it. 
+### Use of class and constructors is EXTREMELY useful
+In a nutshell, classes are constructor functions with a prototype property where the class keyword starts a class declaration and allows you to define a constructor and a set of methods in a single place.  As a personal note, after using factory functions for a bit, getting into the ES6 classes and constructors have proven to be extremely useful and easy to use once you get the hang of it.   Below I did cut-down version of the prototype in this study with emphasis on the clear functionality so you can get a sense of the functional flow.
 ```JavaScript
-    class Calculator {    
-        constructor(previousOperandTextElement, currentOperandTextElement) {  
+    class Calculator {                                                                               // Second, create calculator class
+        constructor(previousOperandTextElement, currentOperandTextElement) {                         // ... with a constructor that takes all the inputs ...
             this.previousOperandTextElement = previousOperandTextElement; calculator)
             this.currentOperandTextElement = currentOperandTextElement; 
             this.clear(); 
         } 
-        clear() { ... }
+        clear() {                                                                                    // ... clear numbers
+            this.currentOperand = '';                                                                // ... and for the current operand, when cleared, it will default to an empty string.
+            this.previousOperand = '';                                                               // ... and for the the previous operand it will also be cleared.
+            this.operation = undefined;                                                              // ... and lastly the operation will be undefined.
+        }
         delete() { ... }
         appendNumber(number) { ... }
         chooseOperation(operation) { ... } 
@@ -49,17 +53,15 @@ After doing a bit of research and tutorial hopping, classes and constructors hav
         updateDisplay() { ... }
     }
 
-    const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+    const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)         // Third, create a calculator object and pass everything from the constructor into it.
 
-    allClearButton.addEventListener('click', function(event) {  
-        calculator.clear();  
-        calculator.updateDisplay(); 
+    const allClearButton = document.querySelector('[data-all-clear]');                               // First, select an element (in this case, the clear button)
+
+    allClearButton.addEventListener('click', function(event) {                                       // Fourth, select a button on click and 
+        calculator.clear();                                                                          // ... and call the "clear" method in the calculator class
+        calculator.updateDisplay();                                                                  // ... and update the display!
     })
 ```
-
-
-
-
 
 <br>
 
