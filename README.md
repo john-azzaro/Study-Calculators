@@ -27,18 +27,18 @@ Yes!  I try to make use of EXTENSIVE commentary (mostly in the form of my though
 
 <br>
 
-## What functionalites does Calculator Study feature?
+## What are the key features of Calculator Study?
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| Feature                                  | 
-| ---------------------------------------- |
-| Current and Previous Operand Display     | 
-| Basic Operations                         |   
-| Clear                                    |   
-| Delete                                   |    
-| Compute                                  |   
-| Equals                                   |   
+| **Features:**                            | **Feature Notes:**                             |
+| ---------------------------------------- | ----------------------------------------------|
+| Current Operand Display                  |   |
+| Previous Operand Display                 |  Basic operation TBA |
+| Basic Operations                         |  Basic operations include: mult, div, add, sub |  
+| Clear                                    |   | 
+| Delete                                   |  Delete increment of 1  |    
+| Equals                                   |   | 
 
 <br>
 
