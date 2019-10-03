@@ -15,11 +15,14 @@ Here are a few questions from the study to explore:
 <br>
 
 ## What are the key takeaways from the calculator study?
+
+<br>
 <dl> 
 
 ### Using data attributes for selectors helps keeps code manageable
 -----
 <dd>For this study, I used data attributes to try something different, but also to see how it could make my code a little "prettier".  Although I do like it since it keeps the id and class attributes a little cleaner, simply having an additional class works just as well.
+
 
 ```HTML
     <button data-number class="numerical-button">1</button>   <== "data-number"
@@ -37,6 +40,7 @@ Additionally, remember to add square brackets when you do your selectors.
 ### Use of class and constructors is EXTREMELY useful
 -----
 <dd>In a nutshell, classes are constructor functions with a prototype property where the class keyword starts a class declaration and allows you to define a constructor and a set of methods in a single place.  As a personal note, after using factory functions for a bit, getting into the ES6 classes and constructors have proven to be extremely useful and easy to use once you get the hang of it.   Below I did cut-down version of the prototype in this study with emphasis on the clear functionality so you can get a sense of the functional flow.
+
 
 ```JavaScript
     class Calculator {                                                                               // Second, create calculator class
