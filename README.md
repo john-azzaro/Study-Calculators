@@ -3,8 +3,22 @@ See it Live: https://john-azzaro.github.io/study-calculators/
 
 <br>
 
-## What is Calculator Study?
-"Calculator Study" is an ongoing examination of calculator programs and functionality collected in one handy repository.  The study includes a variety of HTML and CSS layout and styling designs, as well as a variety of JavaScript code using different tools and coding paradigms.
+## What is the Calculator Study?
+"Calculator Study" is an examination of basic calculator programming and functionality.  Doing some research on calculators, there are a *lot* of ways of making a calculator.  This study includes a variety of HTML and CSS layout and styling designs, as well as a variety of JavaScript code using different tools and coding paradigms such as classes, constrcutors, and some basic OOP!
+
+Here are a few questions from the study to explore:
+
+* [](#)
+* [](#)
+* [](#)
+
+<br>
+
+What 
+
+
+
+
 
 <br>
 
