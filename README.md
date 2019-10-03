@@ -14,26 +14,30 @@ Here are a few questions from the study to explore:
 
 <br>
 
-## What are some interesting takeaways from the calculator study?
+## What are the key takeaways from the calculator study?
 
 <br>
 
-### Using data attributes for selectors helps keeps code manageable
-For this study, I used data attributes to try something different, but also to see how it could make my code a little "prettier".  Although I do like it since it keeps the id and class attributes a little cleaner, simply having an additional class works just as well.
+<dl> 
+<dt>Using data attributes for selectors helps keeps code manageable</dt>
+<dd>For this study, I used data attributes to try something different, but also to see how it could make my code a little "prettier".  Although I do like it since it keeps the id and class attributes a little cleaner, simply having an additional class works just as well.</dd>
+
 ```HTML
     <button data-number class="numerical-button">1</button>   <== "data-number"
     <button data-number class="numerical-button">2</button>
     <button data-number class="numerical-button">3</button>
 ```
-Additionally, remember to add square brackets when you do your selectors.
+<dd>Additionally, remember to add square brackets when you do your selectors.</dd>
+
 ```JavaScript
     const numberButtons = document.querySelectorAll('[data-number]');
 ```
 
 <br>
 
-### Use of class and constructors is EXTREMELY useful
-In a nutshell, classes are constructor functions with a prototype property where the class keyword starts a class declaration and allows you to define a constructor and a set of methods in a single place.  As a personal note, after using factory functions for a bit, getting into the ES6 classes and constructors have proven to be extremely useful and easy to use once you get the hang of it.   Below I did cut-down version of the prototype in this study with emphasis on the clear functionality so you can get a sense of the functional flow.
+<dt>Use of class and constructors is EXTREMELY useful</dt>
+<dd>In a nutshell, classes are constructor functions with a prototype property where the class keyword starts a class declaration and allows you to define a constructor and a set of methods in a single place.  As a personal note, after using factory functions for a bit, getting into the ES6 classes and constructors have proven to be extremely useful and easy to use once you get the hang of it.   Below I did cut-down version of the prototype in this study with emphasis on the clear functionality so you can get a sense of the functional flow.</dd>
+
 ```JavaScript
     class Calculator {                                                                               // Second, create calculator class
         constructor(previousOperandTextElement, currentOperandTextElement) {                         // ... with a constructor that takes all the inputs ...
@@ -62,7 +66,7 @@ In a nutshell, classes are constructor functions with a prototype property where
         calculator.updateDisplay();                                                                  // ... and update the display!
     })
 ```
-
+</dl>
 <br>
 
 ## Does Calculator Study feature commentary?
