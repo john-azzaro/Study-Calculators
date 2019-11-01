@@ -1,5 +1,5 @@
 # Calculator Study
-See it Live: https://john-azzaro.github.io/study-calculators/
+See it Live: https://john-azzaro.github.io/Study-Calculators/
 
 <br>
 
